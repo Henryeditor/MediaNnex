@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MediAnnex – Product Download & Donation</title>
+<style>
+   :root{
+    --bg:#071126;
+    --card:#0f1a2b;
+    --muted:#9fb0c9;
+    --text:#e7f3ff;
+    --accent:#5fa3ff;
+    --radius:14px;
+    --pink:#ff69b4;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Arial;
+    background:linear-gradient(180deg,#03102a 0,#071126 100%);
+    color:var(--text);
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:24px}
+  header{text-align:center;padding:30px 16px}
+  header h1{font-size:28px;margin:0;font-weight:800}
+  header p{color:var(--muted);margin-top:8px;font-size:15px}
+
+  .donation-card{
+    background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+    padding:24px;border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,.04);
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+    text-align:center;
+  }
+  .donation-card img{
+    max-width:250px;
+    width:100%;
+    border-radius:var(--radius);
+    margin:20px auto;
+    display:block;
+    box-shadow:0 6px 18px rgba(0,0,0,0.4);
+  }
+  .donation-card h2{margin:0 0 14px;font-size:22px;font-weight:800}
+  .donation-card p{color:var(--muted);font-size:15px;line-height:1.6;margin:6px 0 20px}
+
+  /* UPI Box */
+  .upi-box{
+    margin:20px auto;
+    padding:12px 16px;
+    background:#0f1a2b;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:var(--radius);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    max-width:300px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+  }
+  .upi-box span{font-size:15px;word-break:break-all}
+  .upi-box:hover{background:#15243a;transform:scale(1.02)}
+
+  .copy-msg{
+    margin-top:10px;
+    color:var(--pink);
+    font-size:14px;
+    display:none;
+    font-weight:600;
+  }
+
+  /* Buttons */
+  @keyframes cutePulse {
+    0% { transform:scale(1); box-shadow:0 0 8px rgba(255,105,180,0.4); }
+    50% { transform:scale(1.05); box-shadow:0 0 16px rgba(255,105,180,0.8); }
+    100% { transform:scale(1); box-shadow:0 0 8px rgba(255,105,180,0.4); }
+  }
+  .actions{
+    display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:20px
+  }
+  .actions a{
+    padding:14px 28px;border-radius:999px;
+    font-weight:700;text-decoration:none;
+    font-size:16px;
+    background:#071829;border:1px solid rgba(255,255,255,.06);
+    color:var(--text);
+    transition:all 0.3s ease;
+    animation:cutePulse 3s infinite;
+  }
+  .actions a:hover{background:var(--accent);color:#021127;transform:scale(1.05)}
+
+  /* Product Section */
+  .product{
+    background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+    padding:24px;border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,.04);
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+    text-align:center;
+    margin-bottom:30px;
+  }
+  .product img{
+    width:100%;
+    height:auto;
+    max-height:400px;
+    object-fit:contain;
+    border-radius:var(--radius);
+    margin-bottom:20px;
+  }
+  .product h2{margin:0;font-size:22px;font-weight:800}
+  .product p{
+    color:var(--muted);
+    margin:16px 0 24px;
+    font-size:15px;
+    line-height:1.7;
+    text-align:justify;
+  }
+
+  @keyframes pulseGlow {
+    0% { box-shadow:0 0 8px rgba(95,163,255,0.6); }
+    50% { box-shadow:0 0 16px rgba(95,163,255,1); }
+    100% { box-shadow:0 0 8px rgba(95,163,255,0.6); }
+  }
+
+  .download-btn{
+    background:var(--accent);color:#021127;
+    animation:pulseGlow 2s infinite;
+  }
+  .download-btn:hover{background:#fff;color:#021127;transform:scale(1.05)}
+
+  /* Mobile */
+  @media(max-width:600px){
+    header h1{font-size:22px}
+    .product h2{font-size:18px}
+    .actions{flex-direction:column}
+    .actions a{width:100%;text-align:center}
+  }
+</style>
+</head>
+<body oncontextmenu="return false">
+
+  <div class="wrap">
+    <!-- Product Section -->
+    <header>
+      <h1>⬇️ Product Download</h1>
+      <p>Download your resource and support MediaNnex with a donation ❤️</p>
+    </header>
+
+    <section class="product">
+      <img src="https://i.imghippo.com/files/dhsB2925D.jpg"/>
+      <h2>Premium Minecraft Lobby | Modern + Clean</h2>
+      <p>
+        <div>Modern Minecraft Lobby | Sleek, Clean, and Premium</div>
+
+        <br><br>
+       <ul>
+  <li>✨ <strong>NPC Points (x6)</strong> – Beautifully built with custom decorations</li>
+  <li>⚔️ <strong>Crate Area (x3)</strong> – Fully prepared for intense battles</li>
+  <li>👑 <strong>Leaderboards (x5–6)</strong> – Ready-to-play King of the Hill arena</li>
+  <li>⚡ <strong>AFK/Small Arena Area</strong> – Smooth performance for multiplayer servers</li>
+  <li>🌍 <strong>Optimized Layout</strong> – Supports versions 1.6 – 1.21+</li>
+  <li>🌍 <strong>Supports Versions 1.6 – 1.21+</strong> – Supports versions 1.6 – 1.21+</li>
+</ul>
+
+      
+      </p>
+      <div class="actions">
+        <a href="https://drive.google.com/file/d/1Gn46FNJoU3EIXMNAElRIcvGVP-EuIhkv/view" target="_blank" class="download-btn">⬇️ Download</a>
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <header>
+      <h1>💖 Support MediaNnex</h1>
+      <p>Your small donation helps us keep creating free resources for everyone 🙌</p>
+    </header>
+
+    <section class="donation-card">
+      <h2>📲 Scan & Pay via Paytm</h2>
+      <img src="https://i.imghippo.com/files/Ukek2637Q.jpg" alt="Paytm QR Code"/>
+      <p>Open your Paytm / UPI app → Scan QR → Enter Amount → Pay securely.</p>
+
+      <div class="upi-box" onclick="copyUPI()">
+        <span id="upiId">sadiksaifi5384@ptyes</span>
+        <strong>Copy</strong>
+      </div>
+      <div class="copy-msg" id="copyMsg">✅ UPI ID Copied!</div>
+    </section>
+  </div>
+
+<script>
+  function copyUPI(){
+    const upiText=document.getElementById("upiId").innerText;
+    navigator.clipboard.writeText(upiText).then(()=>{
+      document.getElementById("copyMsg").style.display="block";
+      setTimeout(()=>{document.getElementById("copyMsg").style.display="none";},2000);
+    });
+  }
+  document.addEventListener('contextmenu',e=>e.preventDefault());
+</script>
+</body>
+</html>

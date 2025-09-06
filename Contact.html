@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MediAnnex – Contact & Donation</title>
+<style>
+  :root{--bg:#071126;--card:#0f1a2b;--muted:#9fb0c9;--text:#e7f3ff;--accent:#5fa3ff;--radius:14px;--pink:#ff69b4}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#03102a 0,#071126 100%);color:var(--text)}
+  .wrap{max-width:900px;margin:0 auto;padding:24px}
+  header{text-align:center;padding:40px 16px}
+  header h1{font-size:28px;margin:0;font-weight:800}
+  header p{color:var(--muted);margin-top:8px}
+
+  .section{background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);padding:24px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.04);margin:20px 0;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+  .section h2{margin:0 0 12px;font-size:20px;font-weight:800}
+  .section p{color:var(--muted);line-height:1.5;font-size:15px;margin:6px 0}
+
+  .contact-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .contact-list li{background:#0f1a2b;padding:14px 16px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.05);transition:all 0.3s ease}
+  .contact-list li:hover{background:var(--accent);color:#021127;transform:scale(1.03)}
+  .contact-list a{color:var(--accent);text-decoration:none;font-weight:600;transition:all 0.3s ease}
+  .contact-list a:hover{text-decoration:underline;color:#021127}
+
+  .socials{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+  .socials a{padding:10px 16px;border-radius:999px;background:#071829;border:1px solid rgba(255,255,255,.06);color:var(--text);font-weight:600;text-decoration:none;transition:all 0.3s ease}
+  .socials a:hover{background:var(--accent);color:#021127;transform:scale(1.05)}
+
+  /* Donation */
+  .donation-card{background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);padding:24px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.04);box-shadow:0 8px 20px rgba(0,0,0,.35);text-align:center}
+  .donation-card img{max-width:250px;width:100%;border-radius:var(--radius);margin:20px auto;display:block;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+  .donation-card h2{margin:0 0 14px;font-size:22px;font-weight:800}
+  .donation-card p{color:var(--muted);font-size:15px;line-height:1.6;margin:6px 0 20px}
+
+  .upi-box{margin:20px auto;padding:12px 16px;background:#0f1a2b;border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:300px;cursor:pointer;transition:background 0.3s ease}
+  .upi-box span{font-size:15px;word-break:break-all}
+  /* 👇 Sirf copy button se scale/glow effect hata diya */
+  .upi-box:hover{background:#15243a}
+
+  .copy-msg{margin-top:10px;color:var(--pink);font-size:14px;display:none;font-weight:600}
+</style>
+</head>
+<body oncontextmenu="return false">
+
+  <div class="wrap">
+    <!-- Contact Section -->
+    <header>
+     <h1>📩  MediaNnex Support </h1>
+      <p>We’d love to hear from you! Reach out through any of the channels below.</p>
+    </header>
+
+    <section class="section">
+      <h2>ℹ️ About MediaNnex</h2>
+      <p>MediaNnex is your one-stop hub for Free & Paid Digital Resources. We provide designs, video editing packs, Minecraft builds, social media solutions, ads, mentorship, and music. Our mission is to simplify content creation by offering affordable and quality resources.</p>
+    </section>
+
+    <section class="section contact-section">
+      <h2>📞 Contact Details</h2>
+      <ul class="contact-list">
+        <li>Email: 
+          <a href="https://mail.google.com/mail/?view=cm&to=editor.henry085@gmail.com" target="_blank" rel="noopener noreferrer">
+            editor.henry085@gmail.com
+          </a>
+        </li>
+        <li>Discord Server: 
+          <a href="https://discord.gg/tnTn44kVQr" target="_blank" rel="noopener noreferrer">Join our Discord</a>
+        </li>
+        <li>Customer Support: <span>Always Available</span></li>
+      </ul>
+    </section>
+
+  <section class="section"> <h2>🌐 Social Media</h2> <div class="socials"> <a href="https://www.instagram.com/henryeditor_sadik/">Instagram</a> <a href="https://www.youtube.com/@HenryEditor">YouTube</a> <a href="https://discord.gg/tnTn44kVQr">Discord</a> <a href="https://builtbybit.com/creators/henryeditor.642819">BuiltByBit</a> </div> </section>
+
+    <!-- Donation Section -->
+    <header>
+      <h1>💖 Support MediaNnex</h1>
+      <p>Your small donation helps us keep creating free resources for everyone 🙌</p>
+    </header>
+
+    <section class="donation-card">
+      <h2>📲 Scan & Pay via Paytm</h2>
+      <img src="https://i.imghippo.com/files/Ukek2637Q.jpg" alt="Paytm QR Code"/>
+      <p>Open your Paytm / UPI app → Scan QR → Enter Amount → Pay securely.</p>
+
+      <div class="upi-box" onclick="copyUPI()">
+        <span id="upiId">sadiksaifi5384@ptyes</span>
+        <strong> Copy</strong>
+      </div>
+      <div class="copy-msg" id="copyMsg">✅ UPI ID Copied!</div>
+    </section>
+  </div>
+
+<script>
+  function copyUPI(){
+    const upiText=document.getElementById("upiId").innerText;
+    navigator.clipboard.writeText(upiText).then(()=>{
+      document.getElementById("copyMsg").style.display="block";
+      setTimeout(()=>{document.getElementById("copyMsg").style.display="none";},2000);
+    });
+  }
+  document.addEventListener('contextmenu',e=>e.preventDefault());
+</script>
+</body>
+</html>
